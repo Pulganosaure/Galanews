@@ -1,0 +1,84 @@
+<?php
+require_once "../functions.php";
+    session_start();
+    $existe = isset($_SESSION['username']);
+
+    if(isset($_SESSION['username']))
+    {
+  		header('location: ../main.php');
+    }
+?>
+
+
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="../css/bootstrap.css">
+
+      <title>Galanews</title>
+    </head>
+    <body>
+
+
+      <header>
+   <?php   header_nav_bar(1, user_is_connected()) ?>
+    <div class="alert alert-warning" role="alert">
+        Le site est en développement, en cas de problème merci d'utiliser le lien en bas de page pour reporter un bug.
+    </div>     
+
+      </header>
+      <div class="container">
+      <div class="row">
+      <div class="col">
+
+      <h1 class="mt-4 mb-4">Inscription :</h1>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<form  method="post" action="inscription_verif.php">
+        <div class="form-group">
+          <label >Nom de commandant :</label>
+          <input type="text" name="username" class="form-control" placeholder="Nom de commandant">
+        </div>
+        <div class="form-group">
+        	<div class="row">
+    			<div class="col">
+          			<label >Mot de passe :</label>
+         			 <input type="password" name="password" class="form-control" placeholder="Mot de passe">    
+         		</div>
+         		<div class="col">
+          			<label >Confirmation :</label>
+          			<input type="password" name="password_verif" class="form-control" placeholder="Mot de passe">
+   				 </div>
+   			</div>
+        </div>
+        <div class="form-group">
+          <label >Adresse Mail :</label>
+          <input type="text" disabled name="email" class="form-control" placeholder="example@exemple.ed">
+        </div>
+        <button type="submit" class="btn btn-primary">Inscription</button>
+      </form>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+    </body>
+    </html>
+
+
+

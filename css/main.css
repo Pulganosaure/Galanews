@@ -1,0 +1,77 @@
+h1
+{
+	position: center;
+	text-align: center;
+}
+
+
+.top_page
+{
+	display: flex;
+	border: none;
+}
+
+.news
+{
+	margin-left: 0.3%;
+	width: 80%;
+		border: solid black 2px;
+	border-radius: 8px;
+
+}
+
+
+.profil
+{
+	width: 20%;
+		border: solid black 2px;
+	border-radius: 8px;
+
+}
+.profil_picture
+{
+	border: solid black 0.1px;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+}
+div
+{
+
+}
+
+body
+{
+	margin: 0 2% 2% 2%;
+	background-color: #a0b6db;
+	min-height: 100%;
+}
+
+html
+{
+	background-color: black;
+	min-height: 100%;
+
+}
+#contenu
+{
+	background-color: #a0b6db;
+	border: solid black 0px;
+	height: 1000px;
+}
+
+.navbar
+{
+	position: center;
+	text-align: center;
+	display: flex;
+	border: solid #c46868 2px;
+	border-radius: 0;
+	background-color: red;
+
+}
+a
+{
+	color: white;
+	margin: auto;
+}
